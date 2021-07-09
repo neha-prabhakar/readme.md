@@ -59,7 +59,7 @@ WHY PREFER JsonPowerDB:
 
 
 In this mini project Insertion and deltion of record is done using JsonPowerDB.
-
+ HTML PAGE:
 
 ![Screenshot 2021-07-09 144812](https://user-images.githubusercontent.com/87073894/125066218-5cd1ba00-e0d0-11eb-98a1-49efb3f7a949.png)
 
@@ -75,4 +75,10 @@ In this mini project Insertion and deltion of record is done using JsonPowerDB.
 
 
 ![Screenshot 2021-07-09 160401](https://user-images.githubusercontent.com/87073894/125066785-05801980-e0d1-11eb-9241-2eae8aa8a07d.png)
+
+
+
+
+![Screenshot 2021-07-09 161942](https://user-images.githubusercontent.com/87073894/125067231-9a831280-e0d1-11eb-8a63-49853ad77c1d.png)
+
 
