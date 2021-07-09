@@ -72,3 +72,7 @@ In this mini project Insertion and deltion of record is done using JsonPowerDB.
 ![Screenshot 2021-07-09 160313](https://user-images.githubusercontent.com/87073894/125066524-b76b1600-e0d0-11eb-9fa4-14e99b6aaf6f.png)
 
 ![Screenshot 2021-07-09 160817](https://user-images.githubusercontent.com/87073894/125066687-e8e3e180-e0d0-11eb-89ae-f5079475c5f3.png)
+
+
+![Screenshot 2021-07-09 160401](https://user-images.githubusercontent.com/87073894/125066785-05801980-e0d1-11eb-9241-2eae8aa8a07d.png)
+
