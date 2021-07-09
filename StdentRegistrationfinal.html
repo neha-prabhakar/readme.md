@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<h1> Student Registration Form</h1>
+
+
+
+</head>
+<body>
+
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+
+
+
+  <label for="email">EmailId:</label>
+  <input type="text" id="email" name="email"><br><br>
+
+  
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" name="phone"><br><br>
+</div>
+<input type="button" class="btn btn-primary" id="empSave" value="REGISTER"
+onclick="saveEmployee();">
+</form>
+</div>
+
+
+
+</form>
+<script>
+$("#fname").focus();
+function validateAndGetFormData() {
+var fnameVar = $("#fname").val();
+if (fnameVar === "") {
+alert("Name is requird!");
+$("#fname").focus();
+return "";
+}
+var emailVar = $("#email").val();
+if (emailVar === "") {
+alert("Email Id required");
+$("#email").focus();
+return "";
+}
+var phoneVar = $("#phone").val();
+if (phoneVar === "") {
+alert("Phone number required");
+$("#phone").focus();
+return "";
+}
+var jsonStrObj = {
+fname: fnameVar,
+eamil: emailVar,
+phone: phoneVar,
+};
+return JSON.stringify(jsonStrObj);
+}
+// This method is used to create PUT Json request.
+function createPUTRequest(connToken, jsonObj, dbName, relName) {
+var putRequest = "{\n"
++ "\"token\" : \""
++ connToken
++ "\","
++ "\"dbName\": \""
++ dbName
++ "\",\n" + "\"cmd\" : \"PUT\",\n"
++ "\"rel\" : \""
++ relName + "\","
++ "\"jsonStr\": \n"
++ jsonObj
++ "\n"
++ "}";
+return putRequest;
+}
+function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+var url = dbBaseUrl + apiEndPointUrl;
+var jsonObj;
+$.post(url, reqString, function (result) {
+jsonObj = JSON.parse(result);
+}).fail(function (result) {
+var dataJsonObj = result.responseText;
+jsonObj = JSON.parse(dataJsonObj);
+});
+return jsonObj;
+}
+function resetForm() {
+$("#fname").val("")
+$("#email").val("");
+$("#phone").val("");
+$("#empId").focus();
+}
+function saveEmployee() {
+var jsonStr = validateAndGetFormData();
+if (jsonStr === "") {
+return;
+}
+var putReqStr = createPUTRequest("90935880|-31948845246375151|90944950",
+jsonStr, "Student", "stu-details");
+alert(putReqStr);
+jQuery.ajaxSetup({async: false});
+var resultObj = executeCommand(putReqStr,
+"http://api.login2explore.com:5577", "/api/iml");
+alert(JSON.stringify(resultObj));
+jQuery.ajaxSetup({async: true});
+resetForm();
+}
+</script>
+
+
+
+</body>
+</html>

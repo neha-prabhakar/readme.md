@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Delete Entry</h1>
+
+<form id="studentForm" method="post">
+<div class="form-group">
+<span><label for="name">Student Name:</label> <label id="name">
+</label></span>
+<input type="text" class="form-control" name="name" id="name"
+placeholder="Enter your name" required>
+</div>
+<input type="button" value="DELETE DATA" onclick="deleteData();"/></center>
+    <p id="show"></p>
+    <script>
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+function deleteData(connToken, jsonObj, dbName, relName,num) {
+var putRequest = "{\n"
++ "\"token\" : \""
++ connToken
++ "\","
++ "\"dbName\": \""
++ dbName
++ "\",\n" + "\"cmd\" : \"REMOVE\",\n"
++ "\"rel\" : \""
++ relName + "\","
++ "\"jsonStr\": \n"
++ jsonObj
++ "\n"
++ "\"record\" : \""
++ num + "\","
++ "}";
+return removeRequest;
+}
+
+
+var removeReqStr = createPUTRequest("90935880|-31948845246375151|90944950",
+jsonStr, "Student", "stu-details","name");
+alert(removeReqStr);
+jQuery.ajaxSetup({async: false});
+var resultObj = executeCommand(removeReqStr,
+"http://api.login2explore.com:5577", "/api/iml");
+alert(JSON.stringify(resultObj));
+jQuery.ajaxSetup({async: true});
+resetForm();
+}
+       
+    </script>
+    </body>
+</html>
