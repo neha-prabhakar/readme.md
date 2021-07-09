@@ -23,6 +23,11 @@ Features :
 
 9.Schema free - easy to develop and maintain.
 
+
+
+
+
+
 10.Web-services API - Can be used with any programming language that has support for HTTP.
 
 11.Enriched by a pluggable API Framework - A developer can develop a pluggable API and plugin into any of our cloud JPDB instance.
@@ -54,5 +59,8 @@ WHY PREFER JsonPowerDB:
 
 
 In this mini project Insertion and deltion of record is done using JsonPowerDB.
+
+
+![Screenshot 2021-07-09 144812](https://user-images.githubusercontent.com/87073894/125066218-5cd1ba00-e0d0-11eb-98a1-49efb3f7a949.png)
 
 
