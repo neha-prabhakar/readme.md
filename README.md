@@ -59,25 +59,28 @@ WHY PREFER JsonPowerDB:
 
 
 In this mini project Insertion and deltion of record is done using JsonPowerDB.
+THIS IS HOW MY PAGE WORKS
  HTML PAGE:
 
 ![Screenshot 2021-07-09 144812](https://user-images.githubusercontent.com/87073894/125066218-5cd1ba00-e0d0-11eb-98a1-49efb3f7a949.png)
 
-
+JsonPowerDB:
 
 ![Screenshot 2021-07-09 144522](https://user-images.githubusercontent.com/87073894/125066421-9c98a180-e0d0-11eb-8871-6c4c4eed849a.png)
 
-
+ADDING DATA:
 
 ![Screenshot 2021-07-09 160313](https://user-images.githubusercontent.com/87073894/125066524-b76b1600-e0d0-11eb-9fa4-14e99b6aaf6f.png)
 
+AFTER ADDING DATA IN JsonPowerDB :
+
 ![Screenshot 2021-07-09 160817](https://user-images.githubusercontent.com/87073894/125066687-e8e3e180-e0d0-11eb-89ae-f5079475c5f3.png)
 
-
+DELETE ENTRY:
 ![Screenshot 2021-07-09 160401](https://user-images.githubusercontent.com/87073894/125066785-05801980-e0d1-11eb-9241-2eae8aa8a07d.png)
 
 
-
+AFTER DELETION:
 
 ![Screenshot 2021-07-09 161942](https://user-images.githubusercontent.com/87073894/125067231-9a831280-e0d1-11eb-8a63-49853ad77c1d.png)
 
